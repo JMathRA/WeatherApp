@@ -1,10 +1,17 @@
 <template>
     <div>
-        <h1></h1>
+        <Suspense>
+            <AsyncCityView />
+            <template #fallback>
+                <p>Loading...</p>
+            </template>
+        </Suspense>
     </div>
 </template>
 
 <script setup>
+import AsyncCityView from '../components/icons/AsyncCityView.vue';
+
 
 </script>
 
